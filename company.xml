@@ -1,0 +1,27 @@
+<company name="Microsoft">
+    <director name="Bill" age="60"/>
+    <departments>
+        <department id="1" name="Buh">
+            <location>USA</location>
+            <employees>
+                <employee id="1">
+                    <name>Peter</name>
+                </employee>
+                <employee id="2">
+                    <name>Stuart</name>
+                </employee>
+            </employees>
+        </department>
+        <department id="2" name="Dev">
+            <location>Ukraine</location>
+            <employees>
+                <employee id="1">
+                    <name>Alex</name>
+                </employee>
+                <employee id="2">
+                    <name>Petr</name>
+                </employee>
+            </employees>
+        </department>
+    </departments>
+</company>
