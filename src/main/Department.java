@@ -1,14 +1,25 @@
 package main;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
+@XmlRootElement(name = "department")
 public class Department implements Serializable {
-    private int    id;
-    private String name;
-    private String location;
-    private Collection<Employee> employees;
+    @XmlAttribute(name = "id")
+    public int    id;
+    @XmlAttribute(name = "name")
+    public String name;
+    @XmlElement(name = "location")
+    public String location;
+    @XmlElement(name = "employee")
+    @XmlElementWrapper(name = "employees")
+    public Collection<Employee> employees = new ArrayList<>();
 
     public Department() {
     }

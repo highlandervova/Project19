@@ -1,11 +1,17 @@
 package main;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Objects;
 
+@XmlRootElement(name = "employee")
 public class Employee implements Serializable {
-    private int    id;
-    private String name;
+    @XmlAttribute(name = "id")
+    public int    id;
+    @XmlElement(name = "name")
+    public String name;
 
     public Employee() {
     }

@@ -1,11 +1,16 @@
 package main;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Objects;
 
+@XmlRootElement(name = "director")
 public class Director implements Serializable {
-    private String name;
-    private int    age;
+    @XmlAttribute(name = "name")
+    public String name;
+    @XmlAttribute(name = "age")
+    public int    age;
 
     public Director() {
     }
