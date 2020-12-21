@@ -22,6 +22,7 @@ public class Main {
         SAXParser parser = factory.newSAXParser();
         File xmlDocument = new File("company.xml");
 
+
         JAXBContext context = JAXBContext.newInstance(Company.class);
         Unmarshaller um = context.createUnmarshaller();
         Company c = (Company) um.unmarshal(xmlDocument);
