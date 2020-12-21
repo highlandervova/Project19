@@ -27,6 +27,7 @@ public class Main {
         Company c = (Company) um.unmarshal(xmlDocument);
         System.out.println(c);
 
+
 //        final Company c = new Company();
 
 //        parser.parse(xmlDocument, new DefaultHandler() {
